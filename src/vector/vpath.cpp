@@ -219,12 +219,11 @@ void VPath::VPathData::addOval(const VRectF &rect, VPath::Direction dir)
 
 void VPath::VPathData::addRect(const VRectF &rect, VPath::Direction dir)
 {
-    if (rect.empty()) return;
-
     float x = rect.x();
     float y = rect.y();
     float w = rect.width();
     float h = rect.height();
+
 
     reserve(5, 6);  // 1Move + 4Line + 1Close
     if (dir == VPath::Direction::CW) {
